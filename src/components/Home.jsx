@@ -121,7 +121,7 @@ window.onload = function exampleFunction() {
                  </div>
                  <div className="u-text--right c-kudos">
                  <div className="u-mt--8">
-					<strong>${member.overall}</strong>
+					<strong>{member.overall}</strong>
                     <Emojify style={{height: 32, width: 32}}>
                         {randomEmoji()}
                             </Emojify>
