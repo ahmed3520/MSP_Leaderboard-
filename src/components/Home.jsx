@@ -111,7 +111,7 @@ window.onload = function exampleFunction() {
             {student.map(function renderMemberPoints(member, i){
                         return   <li className='c-list__item'>
                            <div class="c-list__grid">
-                 <div className={`c-flag c-place u-bg--transparent `+returnClassRank(i)}>{i}</div>
+                 <div className={`c-flag c-place u-bg--transparent `+returnClassRank(i)}>{i+1}</div>
                  <div className="c-media">
                  <img className="c-avatar c-media__img" src={`https://picsum.photos/200/300?random=`+i} />
                  <div className="c-media__content">
