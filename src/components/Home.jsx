@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import db from '../firebase'
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 import { collection, doc, getDocFromCache, onSnapshot, orderBy,query } from "firebase/firestore";
 const Emojify = require("react-emojione").default;
 export default function Home() {
 
 
+    const analytics = getAnalytics();
+    logEvent(analytics, 'page_view');
 
     const [student, setStudents] =useState([{ name: "Loading...", id: "initial" }]);
     useEffect(
@@ -41,6 +45,7 @@ window.onload = function exampleFunction() {
  },)
  function returnClassRank(rank)
  {
+     console.log(rank)
     if(rank === 0) {
         return "u-text--dark u-bg--yellow "
       
