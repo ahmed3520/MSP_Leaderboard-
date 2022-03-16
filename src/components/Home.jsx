@@ -116,7 +116,7 @@ window.onload = function exampleFunction() {
             {student.map(function renderMemberPoints(member, i){
                         return   <li className='c-list__item'>
                            <div class="c-list__grid">
-                 <div className={`c-flag c-place u-bg--transparent `+returnClassRank(i)}>{i}</div>
+                 <div className={`c-flag c-place u-bg--transparent `+returnClassRank(i)}>{i+1}</div>
                  <div className="c-media">
                  <img className="c-avatar c-media__img" src={`https://picsum.photos/200/300?random=`+i} />
                  <div className="c-media__content">
@@ -126,7 +126,7 @@ window.onload = function exampleFunction() {
                  </div>
                  <div className="u-text--right c-kudos">
                  <div className="u-mt--8">
-					<strong>${member.overall}</strong>
+					<strong>{member.overall}</strong>
                     <Emojify style={{height: 32, width: 32}}>
                         {randomEmoji()}
                             </Emojify>
